@@ -50,3 +50,15 @@ public double add(@RequestParam double firstOperand, @RequestParam double second
   return firstOperand + secondOperand;
 }
 ```
+
+POST method sample  
+Step 1 - Create a package dto (Data Transfer Objects) under src/main/java/controller  
+Step 2 - Create mapper class (InputParams.java)  
+Step 3 - Create another method subtraction and place below mentioned code
+```javascript
+@PostMapping("subtract")
+@ResponseBody
+public double subtract(@RequestBody InputParams params) {
+  return params.firstOperand - params.secondOperand;
+}
+```
