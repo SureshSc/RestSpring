@@ -30,11 +30,12 @@ Step 8 - Create new test file(RestCucumberTest.java) and add
 @CucumberOptions(features="src/test/java",plugin= {"pretty"})  
 ```
 Step 9 - Run as JUnit -> Copy generate code from console
-Step 10 - Create Stepdef.java file and paste the generated code
+Step 10 - Create Stepdef.java file and paste the generated code  
 Step 11 - Paste below mentioned line in Stepsdef.java 
 ```javascript
 @RunWith(SpringRunner.class)
-@SpringBootTest 
+@SpringBootTest(webEnvironment=WebEnvironment.DEFINED_PORT, classes=<Application>.class)
+
 ```
 Step 12 - Do mvn test and testcases will be failed.  
 Step 13 - Create package controller (Calculator.java)  
