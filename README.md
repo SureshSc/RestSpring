@@ -5,6 +5,10 @@ Step 4 - Import -> Existing Maven Project
 Step 5 - Added below dependencies to pom.xml. Use cucumber-spring 2.1.0
 ```xml
 <dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+<dependency>
   <groupId>io.cucumber</groupId>
 	<artifactId>cucumber-java</artifactId>
 	<version>4.2.6</version>
