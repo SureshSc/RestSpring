@@ -39,8 +39,8 @@ Step 11 - Paste below mentioned line in Stepsdef.java
 ```
 Step 12 - Do mvn test and testcases will be failed.  
 Step 13 - Create package controller (Calculator.java)  
-Step 14 - Add @RestController for class in Calculator.java
-Step 15 - Create new method add() and place below mentioned annotations
+Step 14 - Add @RestController for class in Calculator.java  
+Step 15 - Create new method add() and place below mentioned annotations  
 ```javascript
 @GetMapping("add")  
 @ResponseBody
