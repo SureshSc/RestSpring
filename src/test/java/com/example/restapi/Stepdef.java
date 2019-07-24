@@ -9,6 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
 import com.example.restapi.dto.InputParams;
+import com.example.restapi.dto.OperationResult;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -30,7 +31,8 @@ public class Stepdef {
 	@When("I invoke the given rest API")
 	public void i_invoke_the_given_rest_API() {
 	    RestTemplate restTemplate = new RestTemplate();
-	    result = restTemplate.getForObject(this.url, Double.class);
+	    OperationResult operationResult = restTemplate.getForObject(this.url, OperationResult.class);
+	    result = operationResult.result;
 	}
 
 	@Then("the epected result should be {double}")
@@ -46,7 +48,8 @@ public class Stepdef {
 	@When("I invoke the given subtract rest API")
 	public void i_invoke_the_given_subtract_rest_API() {
 	    RestTemplate restTemplate = new RestTemplate();
-	    result = restTemplate.postForObject(url, inputParams, Double.class);
+	    OperationResult operationResult = restTemplate.postForObject(url, inputParams, OperationResult.class);
+	    result = operationResult.result;
 	}
 
 }
